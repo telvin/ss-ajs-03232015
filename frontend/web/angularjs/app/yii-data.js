@@ -1,10 +1,6 @@
 app.factory("Data", ['$http', '$q', '$location' ,'ssHelper',
     function ($http, $q, $location, ssHelper) {
-        //var serviceBase = '../../angularjs/api/v1/';
-        //var serviceBase = '../../../../api/web/v1/products/search';
-        //var serviceBase = '../../../../api/web/v1/'; // example: http://localhost:8081/signsmart_yii2_angularjs/api/web/v1/products
-
-        var serviceBase = ssHelper.baseUrl + 'api/web/v1/'; // 'http://localhost:8081/signsmart_yii2_angularjs/api/web/v1/'
+        var serviceBase = ssHelper.baseUrl + 'frontend/web/'; // 'http://localhost:8081/signsmart_yii2_angularjs/frontend/web/'
 
         var obj = {};
         console.log($location.protocol() + "://" + $location.host() + ":" + $location.port());

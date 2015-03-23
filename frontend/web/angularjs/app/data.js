@@ -1,7 +1,6 @@
 app.factory("Data", ['$http', '$q', '$location',
     function ($http, $q, $location) {
-
-        var serviceBase = '../../angularjs/api/v1/'; // example: http://localhost:8081/signsmart_yii2_angularjs/frontend/web/angularjs/api/v1/products
+        var serviceBase = '../../'; // example: http://localhost:8081/signsmart_yii2_angularjs/frontend/web/products
 
         var obj = {};
 
