@@ -6,18 +6,18 @@ app.config(['$routeProvider', '$locationProvider',
         $routeProvider
             .when('/', {
                 title: 'Products',
-                templateUrl: '../../angularjs/partials/products.html',
+                templateUrl: '../../angularjs/views/partials/products.html',
                 controller: 'productsCtrl'
             })
             .when('/ta', {
                 title: 'Products',
-                templateUrl: '../../angularjs/partials/products.html',
+                templateUrl: '../../angularjs/views/partials/products.html',
                 controller: 'productsCtrl'
             })
 
             .when('/ta1', {
                 title: 'Products',
-                templateUrl: '../../angularjs/partials/products.html',
+                templateUrl: '../../angularjs/views/partials/products.html',
                 controller: 'productsCtrl'
             })
             .otherwise({

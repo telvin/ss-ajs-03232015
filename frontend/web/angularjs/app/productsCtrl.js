@@ -19,7 +19,7 @@ app.controller('productsCtrl', function ($scope, $modal, $filter, Data) {
 
     $scope.open = function (p,size) {
         var modalInstance = $modal.open({
-          templateUrl: '../../angularjs/partials/productEdit.html',
+          templateUrl: '../../angularjs/views/partials/productEdit.html',
           controller: 'productEditCtrl',
           size: size,
           resolve: {

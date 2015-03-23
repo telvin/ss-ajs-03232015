@@ -4,6 +4,7 @@ namespace frontend\controllers;
 use app\models\TA;
 use app\models\TB;
 use Yii;
+
 use common\models\LoginForm;
 use common\models\AccountUser;
 use common\models\CollectionVariant;
@@ -77,41 +78,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
-    }
-
-    public function actionTest()
-    {
-
-        $tas = TA::find()->with([
-            'tBs' => function($query){
-
-            }
-        ])->all();
-        foreach($tas as $ta){
-            var_dump($ta->attributes);
-        }
-        exit;
-
-        $acc = AccountUser::findOne(1);
-        var_dump($acc->cvSharedAccounts);
-
-        /* old way
-        $settingCv = CollectionVariant::model()->with(array(
-            'collection' => array(
-                'alias' => 'collection',
-                'condition' => 'collection_extension =:ext',
-                'params' => array('ext' => '.video'),
-            )
-        ))->findByAttributes(array('account_id'=> 1));
-        */
-
-        $settingCvs = CollectionVariant::find()->with([
-            'collection' => function($query){
-                $query->where('collection_extension =:ext', [':ext' => '.video']);
-            }
-        ])->where('account_id = :acc_id', [':acc_id' => 1])->all();
-
-        var_dump($settingCvs);
     }
 
     public function actionLogin()
@@ -212,12 +178,65 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-    public function actionSpa(){
+    public function actionDemo(){
         //angular js
-
+        //Yii::$app->language = 'vi-VD';
         Yii::$app->view->params['ngApp'] = "signSmart";
+        $this->view->title = \Yii::t('frontend', 'SignSmart');
         $this->layout = "angularjs";
-        return $this->render('spa');
+
+
+
+        return $this->render('demo');
+    }
+
+
+    public function actionPage(){
+        //angular js
+        //Yii::$app->language = 'vi-VD';
+        Yii::$app->view->params['ngApp'] = "signSmart";
+        $this->view->title = \Yii::t('frontend', 'SignSmart');
+        $this->layout = "angularjs";
+
+
+
+        return $this->render('page');
+    }
+
+
+
+    public function actionTest()
+    {
+
+        $tas = TA::find()->with([
+            'tBs' => function($query){
+
+            }
+        ])->all();
+        foreach($tas as $ta){
+            var_dump($ta->attributes);
+        }
+        exit;
+
+        $acc = AccountUser::findOne(1);
+        var_dump($acc->cvSharedAccounts);
+
+        /* old way
+        $settingCv = CollectionVariant::model()->with(array(
+            'collection' => array(
+                'alias' => 'collection',
+                'condition' => 'collection_extension =:ext',
+                'params' => array('ext' => '.video'),
+            )
+        ))->findByAttributes(array('account_id'=> 1));
+        */
+
+        $settingCvs = CollectionVariant::find()->with([
+            'collection' => function($query){
+                $query->where('collection_extension =:ext', [':ext' => '.video']);
+            }
+        ])->where('account_id = :acc_id', [':acc_id' => 1])->all();
+
+        var_dump($settingCvs);
     }
 }
