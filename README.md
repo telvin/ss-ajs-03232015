@@ -10,6 +10,10 @@ is a separate Yii application.
 The template is designed to work in a team development environment. It supports
 deploying the application in different environments.
 
+AngularJS lets you extend HTML vocabulary for your application. The resulting environment
+is extraordinarily expressive, readable, and quick to develop.
+
+This project is making the Yii2 framework and AngularJs together.
 
 DIRECTORY STRUCTURE
 -------------------
