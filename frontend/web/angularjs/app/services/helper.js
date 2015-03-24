@@ -7,9 +7,6 @@ app.factory('ssHelper', function($http, $rootScope, $location) {
     var obj = {rootUrl: d};
 
     obj.get = function (q) {
-        console.log($rootScope.baseUrl)
-        console.log(q)
-        console.log($rootScope.baseUrl + q)
         return $http.get($rootScope.baseUrl + q).then(function (results) {
             //return results.data; (.data is a certain attribute from the array that is returned from response, nothing special)
             return results;

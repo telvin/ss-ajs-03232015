@@ -1,0 +1,16 @@
+<div ng-if="member_level == 1">
+    <li>SignSmart member account</li>
+    <li>Access to Level one content and Applications</li>"
+    <li>One standard online digital sign designer with up to 24 links</li>
+    <li>{{free_storage}}GB storage </li>
+</div>
+
+<div ng-if="member_level != 1">
+    <li>All features of {{membership_name}} account</li>
+    <li>Acces to multi-user accounts</li>
+    <li>Unlimited Links on Kiosks</li>
+    <li>Custom Digital Sign Designer Layouts</li>
+    <li>Access to Level 1 and 2 content and applications</li>
+    <li>Storage: {{storageBasePrice}}/GB/Mo</li>
+    <li>Additional Accounts: {{accBasePrice}}/Account/Mo</li>
+</div>

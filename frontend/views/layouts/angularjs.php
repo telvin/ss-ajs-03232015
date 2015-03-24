@@ -48,7 +48,7 @@ AppAsset::register($this);
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/ie10-viewport-bug-workaround.js"></script>
 </head>
-<body ng-class="bodyClass">
+<body ng-class="bodyClass" ng-controller="CustomOrderCtrl">
 
 
     <?= $content ?>

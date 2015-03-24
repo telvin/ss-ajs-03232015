@@ -20,8 +20,8 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <select id="member-level-group" name="member-level-group"
-                                                    class="chzn-select"
+                                            <select id="member-level-group" name="member-level-group" ng-init="level_id=1" ng-model="level_id"
+                                                    class="chzn-select" ng-change="changeMemberLevel()"
                                                     style="width: 200px">
 
                                                 <option ng-repeat="item in info.allSubscription track by $index" value="{{item.id}}">{{item.msGvs[0].name}}</option>
@@ -119,7 +119,24 @@
                         <h1 class="title">Features, Content and Applications</h1>
 
                         <h3 class="subtitle" id="membership_id"></h3>
-                        <ul id="summary"></ul>
+                        <ul id="summary">
+                            <div ng-if="level_id==1">
+                                <li>SignSmart member account</li>
+                                <li>Access to Level one content and Applications</li>"
+                                <li>One standard online digital sign designer with up to 24 links</li>
+                                <li>{{free.storage}}GB storage </li>
+                            </div>
+
+                            <div ng-if="level_id!=1">
+                                <li>All features of {{level.msGvs[0].name}} account</li>
+                                <li>Access to multi-user accounts</li>
+                                <li>Unlimited Links on Designs</li>
+                                <li>Custom Digital Sign Designer Layouts</li>
+                                <li>Access to Level 1 and 2 content and applications</li>
+                                <li>Storage: {{level.storage_unit_price}}/GB/Mo</li>
+                                <li>Additional Accounts: {{level.desktops_unit_price}}/Account/Mo</li>
+                            </div>
+                        </ul>
                         <div id="help_wrapper">
                             <ul id="help_content"></ul>
                         </div>

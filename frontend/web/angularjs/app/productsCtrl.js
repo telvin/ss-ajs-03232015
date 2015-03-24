@@ -19,7 +19,7 @@ app.controller('productsCtrl', function ($scope, $modal, $filter, Data) {
 
     $scope.open = function (p,size) {
         var modalInstance = $modal.open({
-          templateUrl: '../../angularjs/app/templates/partials/productEdit.html',
+          templateUrl: _yii_app.templatePath + '/partials/productEdit.html',
           controller: 'productEditCtrl',
           size: size,
           resolve: {
@@ -57,42 +57,42 @@ app.controller('productsCtrl', function ($scope, $modal, $filter, Data) {
 
 app.controller('productEditCtrl', function ($scope, $modalInstance, item, Data) {
 
-  $scope.product = angular.copy(item);
-        
-        $scope.cancel = function () {
-            $modalInstance.dismiss('Close');
-        };
-        $scope.title = (item.id > 0) ? 'Edit Product' : 'Add Product';
-        $scope.buttonText = (item.id > 0) ? 'Update Product' : 'Add New Product';
+    $scope.product = angular.copy(item);
 
-        var original = item;
-        $scope.isClean = function() {
-            return angular.equals(original, $scope.product);
+    $scope.cancel = function () {
+        $modalInstance.dismiss('Close');
+    };
+    $scope.title = (item.id > 0) ? 'Edit Product' : 'Add Product';
+    $scope.buttonText = (item.id > 0) ? 'Update Product' : 'Add New Product';
+
+    var original = item;
+    $scope.isClean = function () {
+        return angular.equals(original, $scope.product);
+    }
+    $scope.saveProduct = function (product) {
+        product.uid = $scope.uid;
+        if (product.id > 0) {
+            Data.put('products/' + product.id, product).then(function (result) {
+                if (result.status != 'error') {
+                    var x = angular.copy(product);
+                    x.save = 'update';
+                    $modalInstance.close(x);
+                } else {
+                    console.log(result);
+                }
+            });
+        } else {
+            product.status = 'Active';
+            Data.post('products', product).then(function (result) {
+                if (result.status != 'error') {
+                    var x = angular.copy(product);
+                    x.save = 'insert';
+                    x.id = result.data;
+                    $modalInstance.close(x);
+                } else {
+                    console.log(result);
+                }
+            });
         }
-        $scope.saveProduct = function (product) {
-            product.uid = $scope.uid;
-            if(product.id > 0){
-                Data.put('products/'+product.id, product).then(function (result) {
-                    if(result.status != 'error'){
-                        var x = angular.copy(product);
-                        x.save = 'update';
-                        $modalInstance.close(x);
-                    }else{
-                        console.log(result);
-                    }
-                });
-            }else{
-                product.status = 'Active';
-                Data.post('products', product).then(function (result) {
-                    if(result.status != 'error'){
-                        var x = angular.copy(product);
-                        x.save = 'insert';
-                        x.id = result.data;
-                        $modalInstance.close(x);
-                    }else{
-                        console.log(result);
-                    }
-                });
-            }
-        };
+    };
 });
