@@ -46,7 +46,7 @@ AppAsset::register($this);
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/apps/yiiapp.js"></script>
 
     <!-- routes -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/routes/route-1.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/routes.js"></script>
 
     <!-- services -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/services/helper.js"></script>
