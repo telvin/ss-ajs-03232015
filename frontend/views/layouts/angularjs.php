@@ -48,17 +48,18 @@ AppAsset::register($this);
     <!-- routes -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/routes/route-1.js"></script>
 
+    <!-- services -->
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/services/helper.js"></script>
+
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/yii-data.js"></script>
 
     <!-- directives -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives/common/header-1.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives/header-1.js"></script>
 
-    <!-- services -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/services/helper.js"></script>
 
     <!-- controllers -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/controllers/pageCtrl.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/controllers/pagesController.js"></script>
 
     <!-- Some Bootstrap Helper Libraries -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/jquery/jquery-1.10.2.min.js"></script>
@@ -67,11 +68,11 @@ AppAsset::register($this);
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/ie10-viewport-bug-workaround.js"></script>
 </head>
-<?php $this->beginBody() ?>
+<?php //$this->beginBody() ?>
 
 
     <?= $content ?>
 
-    <?php $this->endBody() ?>
+    <?php //$this->endBody() ?>
 </html>
 <?php $this->endPage() ?>

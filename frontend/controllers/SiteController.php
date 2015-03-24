@@ -197,9 +197,6 @@ class SiteController extends Controller
         Yii::$app->view->params['ngApp'] = "signSmart";
         $this->view->title = \Yii::t('frontend', 'SignSmart');
         $this->layout = "angularjs";
-
-
-
         return $this->render('page');
     }
 

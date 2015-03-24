@@ -1,0 +1,197 @@
+<body>
+<div id="container">
+
+    <div id="header">
+
+        <ul>
+            <li>
+                <a href="/signsmart2/index.php/site/kiosk"><img
+                        src="/signsmart2/themes/sign_smart/images/img_signsmart.png" alt="Kiosk"></a>
+            </li>
+            <li class="active">
+                <a href="/signsmart2/index.php/site/upgrademember"><img
+                        src="/signsmart2/themes/sign_smart/images/img_subscribe.png" alt="Sign up"></a>
+            </li>
+            </li>
+            <li class=""><a href="/signsmart2/index.php/site/login"><img
+                    src="/signsmart2/themes/sign_smart/images/img_login.png" alt="Login"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- /header -->
+
+
+    <div id="main" holder="loading">
+
+        <div id="content"><!-- /#content -->
+            <form name="form" id="orderForm" class="css-form" novalidate enctype="multipart/form-data">
+                <div class="custom-oder">
+                    <div style="padding:20px 30px;">
+                        <h3>Membership Level</h3>
+
+                        <div class="block_indent">
+                            <div class="block_indent_left" style="height: 46px">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <select id="member-level-group" name="member-level-group"
+                                                    class="chzn-select"
+                                                    style="width: 200px">
+                                                <!--<?php-->
+                                                <!--foreach($allSubscription as $item) {-->
+                                                <!--?>-->
+                                                <!--<option value="<?php echo $item->id; ?>"><?php echo $item->msGv[0]->name ?></option>-->
+                                                <!--<?php } ?>-->
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="block_indent_right" style="padding-top:20px;"><label>$<span
+                                    id="lvlBasePrice">0.00</span></label></div>
+                            <div class="clr"></div>
+                        </div>
+                        <img src="{{layoutPath}}/images/help.png" name="help" class="help" id="img_mb"
+                             title="Click to read more">
+
+                        <h3>Storage</h3>
+
+                        <div class="block_indent">
+                            <div class="block_indent_left">
+                                <label><span id="storage">2</span> GB</label>
+
+                                <div class="buttomArrow">
+                                    <a id="upStorage" href="javascript:void(0)" class="up"></a>
+                                    <a id="downStorage" href="javascript:void(0)" class="down"></a>
+                                </div>
+                            </div>
+                            <div class="block_indent_right"><label>$<span id="storageBasePrice">0.00</span></label>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <img src="{{layoutPath}}/images/help.png" name="help" class="help" id="img_storage"
+                             title="Click to read more">
+
+                        <h3>Accounts</h3>
+
+                        <div class="block_indent">
+                            <div class="block_indent_left">
+                                <label><span id="acc">1</span> Account</label>
+
+                                <div class="buttomArrow">
+                                    <a id="upAccount" href="javascript:void(0)" class="up"></a>
+                                    <a id="downAccount" href="javascript:void(0)" class="down"></a>
+                                </div>
+                            </div>
+                            <div class="block_indent_right"><label>$<span id="accBasePrice">0.00</span></label></div>
+                            <div class="clr"></div>
+                        </div>
+                        <img src="{{layoutPath}}/images/help.png" name="help" class="help" id="img_account"
+                             title="Click to read more">
+
+                        <div id="sign_zone" style="display: none">
+                            <h3>D-Signs</h3>
+
+                            <div class="block_indent">
+                                <div class="block_indent_left">
+                                    <label><span id="dsign">0</span> D-Sign</label>
+                                </div>
+                                <div class="block_indent_right"><label>$<span id="dsignBasePrice">0.00</span></label>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+
+                            <h3>I-Signs</h3>
+
+                            <div class="block_indent">
+                                <div class="block_indent_left">
+                                    <label><span id="isign">0</span> I-Sign</label>
+                                </div>
+                                <div class="block_indent_right"><label>$<span id="isignBasePrice">0.00</span></label>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div style="width:250px;padding:10px 30px 5px 35px; float:left;">
+                            New Total Monthly Recurring Charge<br>On next Bill processed {{info.nextRecurringDate}}
+                        </div>
+                        <div class="block_indent" style="width:108px; float:left;">
+                            <div class="block_indent_right">
+                                <label>$<span id="lbltotal">0.00</span></label>
+                                <input id="buy_more_storage" name="buy_more_storage" type="hidden" value="0"/>
+                                <input id="buy_more_acc" name="buy_more_acc" type="hidden" value="0"/>
+                                <input id="total" name="total" type="hidden" value="0"/>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="clr"></div>
+                        <small style="font-size:11px; position:absolute; width:100%; bottom:0px; left:2px;">NOTE:
+                            Changes will
+                            be effective immediately. You will not be billed or credited for partial months.
+                        </small>
+                    </div>
+                </div>
+                <div class="custom-oder-featured right">
+                    <div id="featured-body" style="padding:40px 40px;">
+                        <h1 class="title">Features, Content and Applications</h1>
+
+                        <h3 class="subtitle" id="membership_id"></h3>
+                        <ul id="summary"></ul>
+                        <div id="help_wrapper">
+                            <ul id="help_content"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+                <input id="submit_form" name="save_button" type="submit" class="button" style="display:none;"/>
+            </form>
+
+            <div class="line Gold" style="height:5px;"></div>
+            <div class="clr"></div>
+            <div class="docbar">
+                <ul class="topIcon">
+                    <li>
+                        <label>Actions:</label>
+                        <a onclick="return validateForm()" title="Submit" data-ajax="false"><span
+                                class="btn">Submit</span></a>
+                        <a title="Cancel" href="/#/site/index"><span class="btn">Back</span></a>
+                        <a id="a_entercode" noloading="true" title="Discount Code" onclick="showEnterCode()"><span
+                                class="btn">Discount Code</span></a>
+
+                        <div class="clr"></div>
+                    </li>
+                    <li><label>Info:</label>
+
+                        <div class="clr"></div>
+                    </li>
+                </ul>
+                <div class="clr"></div>
+            </div>
+            <div style="display: none" id="code_zone">
+                <table>
+                    <tr>
+                        <td width="38%" style="padding-bottom: 2px"><label>Code name:</label></td>
+                        <td><input type="text" name="enter_code" id="code_name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password:</label></td>
+                        <td><input type="password" name="enter_code" id="code_password" value=""></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div id="main_bottom">
+            <a href=" /signsmart2/index.php/site/dashboard " class="logoBot">&nbsp;</a>
+            <a href=" /signsmart2/index.php/site/logout " class="btn">&nbsp;</a>
+
+            <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <!-- /main -->
+    <div class="clr"></div>
+</div>
+<!-- /#container -->
+
+</body>

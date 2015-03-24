@@ -1,9 +1,10 @@
 app.factory("Data", ['$http', '$q', '$location' ,'ssHelper',
     function ($http, $q, $location, ssHelper) {
-        var serviceBase = ssHelper.baseUrl + 'frontend/web/'; // 'http://localhost:8081/signsmart_yii2_angularjs/frontend/web/'
+        var serviceBase = ssHelper.rootUrl + 'frontend/web/'; // 'http://localhost:8081/signsmart_yii2_angularjs/frontend/web/'
 
         var obj = {};
-        console.log($location.protocol() + "://" + $location.host() + ":" + $location.port());
+        console.log(serviceBase);
+        //console.log($location.protocol() + "://" + $location.host() + ":" + $location.port());
 
         obj.get = function (q) {
             return $http.get(serviceBase + q).then(function (results) {
