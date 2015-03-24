@@ -2,21 +2,7 @@
 <div id="container">
 
     <div id="header">
-
-        <ul>
-            <li>
-                <a href="/signsmart2/index.php/site/kiosk"><img
-                        src="/signsmart2/themes/sign_smart/images/img_signsmart.png" alt="Kiosk"></a>
-            </li>
-            <li class="active">
-                <a href="/signsmart2/index.php/site/upgrademember"><img
-                        src="/signsmart2/themes/sign_smart/images/img_subscribe.png" alt="Sign up"></a>
-            </li>
-            </li>
-            <li class=""><a href="/signsmart2/index.php/site/login"><img
-                    src="/signsmart2/themes/sign_smart/images/img_login.png" alt="Login"></a>
-            </li>
-        </ul>
+        <non-user-top-menu></non-user-top-menu>
     </div>
     <!-- /header -->
 
@@ -37,11 +23,8 @@
                                             <select id="member-level-group" name="member-level-group"
                                                     class="chzn-select"
                                                     style="width: 200px">
-                                                <!--<?php-->
-                                                <!--foreach($allSubscription as $item) {-->
-                                                <!--?>-->
-                                                <!--<option value="<?php echo $item->id; ?>"><?php echo $item->msGv[0]->name ?></option>-->
-                                                <!--<?php } ?>-->
+
+                                                <option ng-repeat="item in info.allSubscription track by $index" value="{{item.id}}">{{item.msGvs[0].name}}</option>
                                             </select>
                                         </td>
                                     </tr>

@@ -1,14 +1,17 @@
 <ul>
     <li>
-        <a href="{{baseUrl}}site/kiosk"><img
-                src="{{layoutPath}}/images/images/img_signsmart.png" alt="Kiosk"></a>
+        <a nav-item nav-item-route="/" nav-item-class="active" nav-active-to="parent"
+           ng-href="./#/">
+            <img ng-src="{{layoutPath}}/images/img_signsmart.png" alt="Kiosk"></a>
     </li>
-    <li class="active">
-        <a href="{{baseUrl}}site/upgrademember"><img
-                src="{{layoutPath}}/images/images/img_subscribe.png" alt="Sign up"></a>
+    <li>
+        <a nav-item nav-item-route="/customorder" nav-item-class="active" nav-active-to="parent"
+           ng-href="./#/customorder">
+            <img ng-src="{{layoutPath}}/images/img_subscribe.png" alt="Sign up"></a>
     </li>
-    </li>
-    <li class=""><a href="{{baseUrl}}site/login"><img
-            src="{{layoutPath}}/images/images/img_login.png" alt="Login"></a>
+    <li>
+        <a nav-item nav-item-route="/login" nav-item-class="active" nav-active-to="parent"
+           ng-href="./#/login">
+            <img ng-src="{{layoutPath}}/images/img_login.png" alt="Login"></a>
     </li>
 </ul>

@@ -29,7 +29,7 @@ class PageController extends ActiveController
             $result['OK'] = 0;
         }
 
-        $allSubscription = Subscription::find()->asArray()->all();
+        $allSubscription = Subscription::find()->with('msGvs')->asArray()->all();
 
         $free = Subscription::find()->where(['id' => 1])->one();
         $gold = Subscription::find()->where(['id' => 2])->one();

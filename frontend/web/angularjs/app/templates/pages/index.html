@@ -1,25 +1,7 @@
-
 <div id="container">
 
     <div id="header">
-
-        <ul>
-            <li>
-                <a nav-item nav-item-route="/" nav-item-class="active" nav-active-to="parent"
-                        ng-href="{{baseUrl}}">
-                    <img ng-src="{{layoutPath}}/images/img_signsmart.png" alt="Kiosk"></a>
-            </li>
-            <li>
-                <a nav-item nav-item-route="/customorder" nav-item-class="active" nav-active-to="parent"
-                   ng-href="./#/customorder">
-                    <img ng-src="{{layoutPath}}/images/img_subscribe.png" alt="Sign up"></a>
-            </li>
-            <li>
-                <a nav-item nav-item-route="/login" nav-item-class="active" nav-active-to="parent"
-                   ng-href="./#/login">
-                <img ng-src="{{layoutPath}}/images/img_login.png" alt="Login"></a>
-            </li>
-        </ul>
+        <non-user-top-menu></non-user-top-menu>
     </div>
     <!-- /header -->
 
@@ -27,7 +9,7 @@
     <div id="main" holder="loading">
         <div id="content">
             <div id="slider2" class="registration_col2" style="width:100%;">
-                <img src="/signsmart2/themes/sign_smart/images/bg_center.jpg" style="height: 512px;width: 944px;" alt=""/>
+                <img ng-src="{{layoutPath}}/images/bg_center.jpg" style="height: 512px;width: 944px;" alt=""/>
             </div>
             <div class="clr"></div>
 

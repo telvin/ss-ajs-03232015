@@ -15,8 +15,8 @@ app.controller('CustomOrderCtrl', function ($rootScope, $scope, $modal, $filter,
 
     $scope.info = {};
 
-    ssHelper.get("/page/customorder").then(function(data){
-        $scope.info = data;
+    ssHelper.get("/page/customorder").then(function(response){
+        $scope.info = response.data;
 
     });
 

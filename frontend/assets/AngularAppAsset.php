@@ -19,9 +19,13 @@ class AngularAppAsset extends AssetBundle
         'app/services/helper.js',
         'app/services/yii-data.js',
 
-        //directives
-        'app/directives/header-1.js',
-        'app/directives/nav-item.js',
+        //directives - common
+        'app/directives/common/header-1.js',
+        'app/directives/common/nav-item.js',
+
+        //directives - partials
+        'app/directives/partials/non-user-top-nav.js',
+
     ];
 
     public $jsOptions = [ 'position' => \yii\web\View::POS_HEAD ];
