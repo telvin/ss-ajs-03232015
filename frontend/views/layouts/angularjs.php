@@ -23,6 +23,10 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
+
+    <!-- Global settings: required -->
+    <?php echo $this->render('global-settings', ['app' => \Yii::$app]) ?>
+
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 
@@ -32,30 +36,6 @@ AppAsset::register($this);
     <link rel="stylesheet" href="<?= \Yii::$app->request->BaseUrl ?>/angularjs/css/font-awesome.min.css" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-
-    <!-- Global settings: required -->
-    <?php echo $this->render('global-settings', ['app' => \Yii::$app]) ?>
-
-    <!-- Libraries -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/angular-1.3.14/angular.min.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/ui-bootstrap-tpls-0.11.2.min.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/angular-1.3.14/angular-route.min.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/angular-1.3.14/angular-animate.min.js"></script>
-
-    <!-- AngularJS custom codes -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/apps/yiiapp.js"></script>
-
-    <!-- routes -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/routes.js"></script>
-
-    <!-- services -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/services/helper.js"></script>
-
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/yii-data.js"></script>
-
-    <!-- directives -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives/header-1.js"></script>
 
 
     <!-- controllers -->
@@ -68,11 +48,11 @@ AppAsset::register($this);
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/ie10-viewport-bug-workaround.js"></script>
 </head>
-<?php //$this->beginBody() ?>
+<body ng-class="bodyClass">
 
 
     <?= $content ?>
 
-    <?php //$this->endBody() ?>
+<?php $this->endBody() ?>
 </html>
 <?php $this->endPage() ?>

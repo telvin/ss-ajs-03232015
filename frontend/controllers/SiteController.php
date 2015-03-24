@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use app\models\TA;
 use app\models\TB;
+use frontend\assets\AngularAppAsset;
 use Yii;
 
 use common\models\LoginForm;
@@ -190,18 +191,6 @@ class SiteController extends Controller
         return $this->render('demo');
     }
 
-
-    public function actionPage(){
-        //angular js
-        //Yii::$app->language = 'vi-VD';
-        Yii::$app->view->params['ngApp'] = "signSmart";
-        $this->view->title = \Yii::t('frontend', 'SignSmart');
-        $this->layout = "angularjs";
-        return $this->render('page');
-    }
-
-
-
     public function actionTest()
     {
 
@@ -235,5 +224,18 @@ class SiteController extends Controller
         ])->where('account_id = :acc_id', [':acc_id' => 1])->all();
 
         var_dump($settingCvs);
+    }
+
+    public function actionPage(){
+        //angular js
+        //Yii::$app->language = 'vi-VD';
+
+        //register angular bundle layout
+        AngularAppAsset::register($this->view);
+
+        Yii::$app->view->params['ngApp'] = "signSmart";
+        $this->view->title = \Yii::t('frontend', 'SignSmart');
+        $this->layout = "angularjs";
+        return $this->render('page');
     }
 }
