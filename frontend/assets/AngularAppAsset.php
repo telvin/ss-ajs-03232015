@@ -18,6 +18,7 @@ class AngularAppAsset extends AssetBundle
         //services
         'app/services/helper.js',
         'app/services/yii-data.js',
+        'app/services/signal-handler.js',
 
         //directives - common
         'app/directives/common/header-1.js',

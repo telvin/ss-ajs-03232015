@@ -1,11 +1,14 @@
 <div class="modal-header">
-    <h3 class="modal-title">Remote Example</h3>
+    <h3 class="modal-title">I'm a modal!</h3>
 </div>
 <div class="modal-body">
-    <p>Click the button to change the image in the demo page</p>
     <ul>
         <li ng-repeat="item in items track by $index">
             <a ng-click="changeImage($index)" ng-class="{active: displayIndex == $index}">{{ item }}</a>
         </li>
     </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>

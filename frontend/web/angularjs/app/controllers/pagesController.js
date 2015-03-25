@@ -39,10 +39,16 @@ app.controller('CustomOrderCtrl', function ($rootScope, $scope, $modal, $filter,
 
 });
 
-app.controller('RemoteModalCtrl', function ($scope, $modal, $log) {
+/** for the remote functionality, we have to make the remote that is able to control every screen, therefore
+ * I keep modal controller as top parent scope to any children scope **/
+app.controller('RemoteModalCtrl', function ($scope, $modal, $location, $route, $log) {
 
-    $scope.items = ['item1', 'item2', 'item3'];
-    $scope.obj = {};
+    $scope.items = ['Button 1', 'Button 2', 'Button 3'];
+
+    $scope.isShowButtons = function () {
+        return $location.path() == '/demo';
+    };
+
 
     $scope.open = function (size) {
         var modalInstance = $modal.open({
@@ -68,7 +74,7 @@ app.controller('RemoteModalCtrl', function ($scope, $modal, $log) {
     };
 });
 
-app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items, SignalService) {
 
     $scope.items = items;
     $scope.selected = {
@@ -84,24 +90,41 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
     };
 
     $scope.changeImage = function(index){
-        console.log(index, 'ttt');
-        $scope.sign1.displayIndex = index;
+        var sendData = index;
+        //console.log('send signal', sendData); // 'Some data'
+
+        SignalService.broadcast('remoteSignal', sendData);
     }
 });
 
-app.controller('DemoCtrl', function ($rootScope, $scope) {
+app.controller('DemoCtrl', function ($rootScope, $scope, SignalService) {
     $rootScope.baseUrl = _yii_app.baseUrl;
     $rootScope.layoutPath = _yii_app.layoutPath;
 
     $rootScope.bodyClass = '';
-    $scope.sign1 = {};
 
     $scope.images = [
-        _yii_app.layoutPath + '/images/img_kiosk_preview2.jpg',
-        _yii_app.layoutPath + '/images/img_kiosk_preview7.jpg',
+        _yii_app.layoutPath + '/images/lotus-c-01-motorcycle-116.jpg',
+        _yii_app.layoutPath + '/images/motorcycle-raid.jpg',
+        _yii_app.layoutPath + '/images/business_people_2.png',
+
 
     ];
-    $scope.sign1.displayIndex = 1;
+    $scope.displayIndex = 0;
+
+
+    /* execute the command from the remote */
+    //$scope.$on('remoteSignal', function(event, data){
+    //
+    //    console.log(event, data); // 'Some data'
+    //    $scope.displayIndex = data;
+    //
+    //})
+
+    SignalService.listen('remoteSignal', function(event, data){
+        //console.log(event, data); // 'Some data'
+        $scope.displayIndex = data;
+    });
 
 
 });
