@@ -1,13 +1,3 @@
-app.controller('demoCtrl', function ($rootScope, $scope) {
-    $rootScope.baseUrl = _yii_app.baseUrl;
-    $rootScope.layoutPath = _yii_app.layoutPath;
-
-    $rootScope.bodyClass = 'short_main';
-    $scope.params = {};
-
-
-});
-
 app.controller('indexCtrl', function ($rootScope, $scope) {
     $rootScope.baseUrl = _yii_app.baseUrl;
     $rootScope.layoutPath = _yii_app.layoutPath;
@@ -47,7 +37,6 @@ app.controller('CustomOrderCtrl', function ($rootScope, $scope, $modal, $filter,
         }
     }
 
-
 });
 
 app.controller('RemoteModalCtrl', function ($scope, $modal, $log) {
@@ -59,6 +48,7 @@ app.controller('RemoteModalCtrl', function ($scope, $modal, $log) {
             templateUrl: _yii_app.absTemplatePath + '/partials/signup.html',
             windowTemplateUrl: _yii_app.absTemplatePath + '/partials/modal-window-signup.html',
             controller: 'ModalInstanceCtrl',
+            windowClass: 'app-modal-window',
             size: size,
             backdrop: false,
             resolve: {
@@ -90,4 +80,14 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
+});
+
+app.controller('DemoCtrl', function ($rootScope, $scope) {
+    $rootScope.baseUrl = _yii_app.baseUrl;
+    $rootScope.layoutPath = _yii_app.layoutPath;
+
+    $rootScope.bodyClass = '';
+    $scope.params = {};
+
+
 });
