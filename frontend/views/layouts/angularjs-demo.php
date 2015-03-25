@@ -41,11 +41,11 @@ AppAsset::register($this);
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/angular-1.3.14/angular-animate.min.js"></script>
 
     <!-- AngularJS custom codes -->
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/app.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/apps/app.js"></script>
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/services/helper.js"></script>
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/yii-data.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives.js"></script>
-    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/productsCtrl.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/directives/directives.js"></script>
+    <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/controllers/productsCtrl.js"></script>
 
     <!-- Some Bootstrap Helper Libraries -->
 

@@ -22,6 +22,7 @@ class AngularAppAsset extends AssetBundle
         //directives - common
         'app/directives/common/header-1.js',
         'app/directives/common/nav-item.js',
+        'app/directives/common/draggable.js',
 
         //directives - partials
         'app/directives/partials/non-user-top-nav.js',

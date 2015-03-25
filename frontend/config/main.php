@@ -6,6 +6,17 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
+/* do some little bit stuff to hide the frontend/web from url
+
+add the .htaccess file into the yii app root folder
+modify the .htaccess file in the frontend/web/ folder
+
+*/
+
+use \yii\web\Request;
+$baseUrl = str_replace('/frontend/web', '', (new Request)->getBaseUrl());
+
+
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
@@ -28,6 +39,18 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
+        'request' => [
+            'baseUrl' => $baseUrl,
+        ],
+        'urlManager' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => $baseUrl,
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+
+            'rules' => [],
+        ]
     ],
     'params' => $params,
 ];

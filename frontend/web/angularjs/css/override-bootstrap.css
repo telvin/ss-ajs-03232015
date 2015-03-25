@@ -1,0 +1,24 @@
+label {
+    display: initial;
+    margin-bottom: initial;
+    font-weight: initial;
+}
+
+
+button, input, optgroup, select, textarea {
+    color: initial;
+    font: inherit;
+    margin: 0
+}
+
+* {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing:initial;
+    box-sizing: initial;
+}
+
+:before, :after {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}

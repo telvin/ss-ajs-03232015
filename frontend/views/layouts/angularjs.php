@@ -28,8 +28,10 @@ AppAsset::register($this);
     <?php echo $this->render('global-settings', ['app' => \Yii::$app]) ?>
 
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
 
+    <!-- Registered JS (POS_HEAD) will be loaded here -->
+
+    <?php $this->head() ?>
 
     <link rel="stylesheet" href="<?= \Yii::$app->request->BaseUrl ?>/angularjs/css/custom.css" type="text/css" />
     <link rel="stylesheet" href="<?= \Yii::$app->request->BaseUrl ?>/angularjs/css/font-awesome.min.css" type="text/css" />
@@ -38,17 +40,21 @@ AppAsset::register($this);
     <!-- controllers -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/app/controllers/pagesController.js"></script>
 
-    <!-- Some Bootstrap Helper Libraries -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/jquery/jquery-1.10.2.min.js"></script>
 
-    <!-- \Yii::$app->request->BaseUrl ?>/angularjs/css/bootstrap.min.css -->
+    <!-- Some Bootstrap Helper Libraries -->
+    <link rel="stylesheet" href="<?= \Yii::$app->request->BaseUrl ?>/angularjs/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= \Yii::$app->request->BaseUrl ?>/angularjs/css/override-bootstrap.css" type="text/css" />
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/bootstrap.min.js"></script>
 
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/underscore.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?= \Yii::$app->request->BaseUrl ?>/angularjs/lib/ie10-viewport-bug-workaround.js"></script>
+
+
+    <!-- CSS of detail page would be loaded here later -->
 </head>
-<body ng-class="bodyClass" ng-controller="CustomOrderCtrl">
+<body ng-class="bodyClass">
 
 
     <?= $content ?>
