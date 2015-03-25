@@ -1,0 +1,387 @@
+.format_success
+{
+    color: #FFFFFF;
+    display: block;
+    font-size: 120%;
+    line-height: 130%;
+    text-shadow: 1px 1px 1px #000000;
+}
+.selected{
+
+    display: block;
+    position: relative;
+    z-index: 999;
+
+}
+.dynamic_text_box
+{
+    padding: 5px 0px 5px 0px;
+}
+.device_type{
+    position: relative !important;
+    display: block !important;
+    font-size: 15px !important;
+    text-align: left !important;
+    top: -10px;
+    color: red;
+    font-weight: bold;
+    font-style: normal !important;
+}
+#content .column_left span.wrap_avatar input {
+    display: inline-block;
+    height: 15%;
+    position: absolute;
+    right: 15%;
+    text-align: left;
+    text-indent: -9999em;
+    top: 5%;
+    width: 15%;
+}
+
+.errorMessage
+{
+    color: #FFFF00;
+    display: block;
+    padding-top: 6px;
+}
+
+
+.addmore .removeicon {
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    top: 13%;
+    z-index: 2;
+    margin: 7px 5px 5px 0px;
+}
+
+.button_submit_idle
+{
+    border: none;
+    background: url('../images/icon_cf_add_idle.png') no-repeat top left;
+    width: 34px;
+    height: 34px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+
+
+.button_submit_content_link {
+    background: url("../images/btn_add_over.png") no-repeat scroll left top transparent;
+    border: medium none;
+    height: 47px;
+    width: 131px;
+}
+
+.button_submit_register
+{
+    border: none;
+    background: url('../images/btn_select_plan.png') no-repeat top left;
+    width: 312px;
+    height: 54px;
+    float: right;
+    cursor: pointer;
+	margin-right: 58px;
+}
+
+
+.button_submit_account {
+    border: none;
+    background: url('../images/btn_submit.png') no-repeat top left;
+    width: 312px;
+    height: 54px;
+    float: right;
+    margin-right: 108px;
+    cursor: pointer;
+}
+
+.registration_col2 .long .minus {
+    position: absolute;
+    right: -20px;
+    top: 9px;
+}
+
+.margin_5
+{
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+.errorSpan{
+    color: #FFFFFF;
+}
+.cf_colLeft
+{
+    box-shadow:none;
+    padding-left:14px;
+    border-right-width:3px;
+}
+.textbox_medium_2
+{
+    padding-left:10px;
+}
+.textbox_medium_2 input
+{
+    width:175px;
+}
+.cf_colRight_box textarea { overflow: auto; }
+.column_listing_wrapper {padding-bottom:1px;}
+
+
+
+
+.forPlaceholder .minus {
+    position: absolute;
+    right: -20px;
+    top: 10px;
+}
+
+
+.button_submit_template {
+    border: none;
+    background: url('../images/btn_submit.png') no-repeat top left;
+    width: 312px;
+    height: 54px;
+    cursor: pointer;
+}
+
+.button_add_to_library {
+    border: none;
+    background: url('../images/icon_cf_add.png') no-repeat top left;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.button_save_template {
+    border: none;
+    background: url('../images/btn_save_small.png') no-repeat top left;
+    width: 35px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+.color_href_message
+{
+    color: #00AEEF !important;
+}
+.bgkiosk{
+    background-image:url(../images/img_kiosk.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+    width:121px;
+    height:106px;
+    display:block;
+    padding-top:15px
+}
+
+.button_delete_content
+{
+    border: none;
+    background: url('../images/delete_content.png') no-repeat top left;
+    width: 16px;
+    height: 16px;
+}
+
+
+.search_box .search_content_keyword {
+    border: medium none;
+    display: inline-block;
+    position: absolute;
+    padding-top: 2px;
+}
+
+
+.button_submit_directory {
+    border: none;
+    background: url('../images/btn_submit216.png') no-repeat top left;
+    width: 216px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.button_save_template_directory {
+
+    background: url("../images/bg_btn_172.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 30px;
+    width: 172px;
+    font: bold 13px/30px "helvetica neue","helvetica";
+    color: white;
+
+}
+.addlisting_btn{
+
+    background: url("../images/bg_btn_172.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font: bold 13px/30px "helvetica neue","helvetica";
+    height: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 172px;
+
+}
+.addlisting_btn:hover{
+
+    background-position: center bottom;
+    text-decoration: none;
+}
+.button_save_template_directory:hover{
+
+    background-position: center bottom;
+    text-decoration: none;
+}
+
+/*.directoryListMid label span.up {
+    background: url("../images/arrow_up_blue.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    left: 5px;
+    position: absolute;
+    text-align: left;
+    text-indent: -9999em;
+    width: 16px;
+}*/
+
+.button_configure_directory {
+    border: none;
+    background: url('../images/btn_configure_directory.png') no-repeat top left;
+    width: 274px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.input70 {
+    background: url("../images/bg_input70.png") no-repeat scroll 0 0 transparent;
+    width: 80px;
+}
+
+
+.button_delete_account_group {
+    border: none;
+    background: url('../images/btn_remove_group.png') no-repeat top left;
+    width: 274px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.button_submit_layout_directory {
+    border: none;
+    background: url('../images/btn_submit182.png') no-repeat top left;
+    width: 182px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.button_submit_directory_export {
+    border: none;
+    background: url('../images/btn_exportfile.png') no-repeat top left;
+    width: 215px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.popup-additem-heading{
+    height: 40px;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.popup-field-required{
+    color: red;
+}
+
+
+.storage{
+    height: 40px;
+    font-size: 11px;
+    padding-right: 10px;
+	width:220px;
+	float: right;
+	margin-right:30px;
+	border: 1px;
+}
+
+
+.storage .spaceValue{
+	width:65px;
+	float: left;
+	height:15px;
+	line-height:19px;
+	text-align: center;
+}
+.storage .spaceAvailable{
+	width:155px;
+	height:15px;
+	float: left;
+	background-color:#0283ef;
+	margin-top:5px;
+	font-size: 11px;
+	line-height:15px;
+	
+}
+.storage .spaceUseValue{
+	width:155px;
+	height:15px;
+	float: left;
+	margin-top:0px;
+}
+.storage .spaceUsed{
+	height:15px;
+	background-color:#000000;
+	font-size: 11px;
+	line-height:15px;
+
+}
+
+.wrap_info{
+    display: block;
+    position: relative;
+	border-top:solid 5px #000;
+	background:#333;
+	height:427px;
+}
+
+.jwdisplayIcon{
+    display: none !important;
+}
+
+.sign_type .jqi{
+    /*min-width: 250px;*/
+}
+.sign_type .jqi .jqimessage{
+    /*border: 1px solid;*/
+}
+.sign_type .jqi .jqimessage tr.title td{
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.sign_type .jqi .jqimessage tr td h3{
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+
+}
+.sign_type .jqi .jqibuttons{
+    /*border-right: 1px solid #000000;*/
+    /*border-left: 1px solid #000000;*/
+    /*border-bottom: 1px solid #000000;*/
+    margin-right: 0;
+}
+.sign_type .jqi .jqibuttons button:first-child{
+    /*float: left;*/
+}
+.sign_type .jqi .jqimessage table tr td label{
+    cursor: pointer;
+}
+table tr td input.disabled{
+    user-select : none;
+    -moz-user-select : none;
+    -webkit-user-select : none;
+    background-color: lightgray;
+    cursor: pointer;
+
+}

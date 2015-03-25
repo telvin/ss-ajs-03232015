@@ -1,0 +1,146 @@
+/* CSS Document */
+#editcontent .rowlv1,
+#editcontent .rowlv2,
+#editcontent .rowlv4{
+     display:block;
+     padding-bottom:2px;
+ }
+#editcontent .rowlv1>div,
+#editcontent .rowlv2>div,
+#editcontent .rowlv4>div{
+    background-color: #333333;
+    box-shadow: 1px 2px 3px #000000;
+    margin-right:1px;
+}
+#editcontent .rowlv1>div>ul>li,
+#editcontent .rowlv2>div>ul>li,
+#editcontent .rowlv4>div>ul>li{
+    display:inline-block;
+    float:left;
+    padding:5px;
+    cursor:pointer;
+}
+#editcontent .rowlv1>div>ul>li>label,
+#editcontent .rowlv2>div>ul>li>label,
+#editcontent .rowlv4>div>ul>li>label{
+    text-align:center;
+    font-size:11px;
+    display:block;
+}
+#editcontent a.titlebar{
+    background-color: #A1A1A1;
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    padding: 0 5px;
+    text-shadow: 1px 1px #000000;
+    top: 82px;
+}
+#editcontent .row1 img,
+#editcontent .row2 img,
+#editcontent .row3 img{
+	height:50px;
+	display:block;
+}
+
+#editcontent .row2 ul,
+#editcontent .row3 ul{
+
+}
+#editcontent .row4 div{
+    background-color: #000000;
+    box-shadow: 1px 2px 3px #000000;
+    height: 80px;
+    width: 100%;
+}
+#editcontent li.pin{
+	padding-top:15px!important;	
+	background:url(../images/p-code-pin.png) center 5px no-repeat;	
+}
+#editcontent li.pas{
+	padding-top:15px!important;	
+	background:url(../images/p-code-pas.png) center 5px no-repeat;	
+}
+#editcontent li.pri{
+	padding-top:15px!important;	
+	background:url(../images/p-code-pri.png) center 5px no-repeat;	
+}
+#editcontent li.pub{
+	padding-top:15px!important;	
+	background:url(../images/p-code-pub.png) center 5px no-repeat;	
+}
+.notes{
+	position:absolute;
+	right:0;
+	top:0;
+	font-size:12px;
+	background:none;
+}
+.notes span{
+	display:inline-block;
+	float:left;
+	padding-right:20px;
+	font-weight:bold;
+}
+.notes .pri{
+	color:red;
+	padding-left:12px;
+	background:url(../images/p-code-pri.png) left no-repeat;	
+}
+.notes .pas{
+	color:#0018ff;
+	padding-left:12px;
+	background:url(../images/p-code-pas.png) left no-repeat;
+}
+.notes .pin{
+	color:#00bb00;
+	padding-left:12px;
+	background:url(../images/p-code-pin.png) left no-repeat;
+}
+.notes .pub{
+	color:#fff600;
+	padding-left:12px;
+	background:url(../images/p-code-pub.png) left no-repeat;
+}
+.coverflow{
+    padding-top:5px;
+}
+.coverflow div{
+    min-height:20px!important;
+    background:none;
+}
+#contentFlow div.flow{
+    height:150px!important;
+}
+
+ul.float_left li,#editcontent .scrollContent ul li{
+    display:inline-block;
+    float:left;
+    padding:5px 10px;
+    text-align:center;
+}
+ul.float_left li img,#editcontent .scrollContent ul li img{
+    display:inline-block;
+    margin:0 auto;
+}
+ul.float_left li span,#editcontent .scrollContent ul li label{
+    display:block;
+    text-align:center;
+    font-size:11px;
+}
+div.jThumbnailScroller{
+    margin:0;
+    padding:0;
+    border:none;
+    border-radius:0;
+}
+#editcontent .scrollContent{
+    height:88px;
+}
+#editcontent .scrollContent ul{
+    max-width:100%;
+}
+#editcontent .scrollContent ul li{
+    display:inline-block;
+    float:left;
+}

@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+.parkway_tc #container{
+	width:1080px;
+	background-color: #2e67d5;
+	padding-bottom:180px;
+	position:relative;
+}
+body.parkway_tc{
+	background-image:none;
+	background-color:#FFF;
+}
+.parkway_tc #header{
+	height:267px;
+	width:100%;
+	font-family:"Times New Roman", Times, serif;
+	background:url(../images/bg_pk_header3.jpg) 0 0 repeat-x;
+	overflow:hidden;
+}
+.parkway_tc #header tr,
+.parkway_tc #header td{
+	vertical-align:top;
+}
+.parkway_tc #header table{
+	height:184px;
+}
+.parkway_tc #content{
+	padding:20px;
+	width:auto;
+	display:block;
+	margin:0 0 0 0px;
+	width:1040px;
+	height:auto;
+}
+.parkway_tc td{
+	font-size:16px;
+}
+.parkway_tc .directoryListMid td{
+	font-weight:bold;
+	padding-bottom:10px;
+}
+.parkway_tc .directoryListBot td.dlistCol2,
+.parkway_tc .directoryListBot td.dlistCol3{
+	background:url(../images/dotted.jpg) 0 16px repeat-x;
+}
+.parkway_tc .directoryListBot td.dlistCol3{
+	text-align:right;
+}
+.parkway_tc .directoryListBot td.dlistCol6{
+	text-align:right;
+}
+.parkway_tc .directoryListBot td span{
+	background-color:#2e67d5;
+	display:inline-block;
+	padding:0 5px 0 5px;
+}
+.parkway_tc table{
+	width:100%;
+}
+.parkway_tc td.dlistCol2{
+	width:40%;
+}
+.parkway_tc td.dlistCol7{
+	width:5%;
+}
+.parkway_tc table.pkbottom{
+	width:100%;
+	height:150px;
+	position:absolute;
+	bottom:20px;
+	left:20px;
+}
+.parkway_tc table.pkbottom td{
+	width:25%;
+	text-align:center;
+}
+.parkway_tc table.pkbottom .btn1{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 25; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(5, 62, 144); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+.parkway_tc table.pkbottom .btn2{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 24; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px 25px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(15, 101, 251); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+
+.parkway_tc table.pkbottom .btnal{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 24; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px 28px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(15, 101, 251); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+
+.parkway_tc table.pkbottom .btnal_active{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 25; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px 28px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(5, 62, 144); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+
+.parkway_tc table.pkbottom .btn5{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 25; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px 25px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(5, 62, 144); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+
+.parkway_tc table.pkbottom .btn3{
+    pointer-events: auto; width: 150px; height: 48px; z-index: 23; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(15, 101, 251); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+    line-height:48px;
+}
+
+.parkway_tc table.pkbottom td,
+.parkway_tc table.pkbottom tr{
+	vertical-align:middle;
+}
+.parkway_tc .header_pk{
+	width:100%;
+	height:140px;
+	margin:0 auto;
+	overflow:hidden;
+	color:#004677;
+	text-align:center;
+	text-transform:capitalize;
+	font-size:67px;
+	line-height:60px;
+	padding-top:28px;
+	padding-bottom:16px;
+}
+.parkway_tc .header_pk span{
+	font-size:52px;
+	text-transform:uppercase;
+	letter-spacing:15px;
+}
+.parkway_tc .pk_title{
+	color:#FFF;
+	font-size:50px;
+	text-align:center;
+	text-transform:capitalize;
+	text-align:center;
+	width:100%;
+	height:81px;
+	line-height:81px;	
+}

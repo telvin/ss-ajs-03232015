@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+.cf_colRight_box .jThumbnailScroller .jTscroller a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	background:transparent;
+	margin-bottom:0px;
+}
+.cf_colRight_box .jThumbnailScroller .jTscroller a span{
+	display:block;
+	font-size:10px;
+	line-height:12px;
+	text-align:center;
+	padding-bottom:5px;
+	text-shadow: 1px 1px 1px #000;
+	color:#fff;
+}
+.cf_colRight_box .jThumbnailScroller .jTscroller a img{
+	display:inline-block;
+	height:70px;
+	border:0px;
+}
+.cf_colRight_box .jThumbnailScroller{
+	margin:0px;
+}
+.cf_colRight_box .jThumbnailScroller{
+	border:solid 4px #323232;
+	border-radius:0px;
+	box-shadow:2px 2px 2px #000;
+	background-color:#808080;
+}
+.cf_colRight_box .jThumbnailScroller{
+	height:95px;
+	width:410px;
+	 margin: 5px 0 0 0px;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s{
+	height:65px;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s a img{
+	height:55px;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s a{
+	position:relative;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s a .btn_delete{
+	position:absolute;
+	display:none;
+	width:16px;
+	height:16px;
+	z-index:1;
+	right:0;
+	top:0;
+	overflow:hidden;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s a .btn_delete img{
+	width:16px;
+	height:16px;
+}
+.cf_colRight_box .jThumbnailScroller.kiosk_sldie_s a:hover .btn_delete{
+	display:inline-block;
+}
+.cf_colRight_box.boxslide{
+	padding:0 5px 0 5px;
+	position:relative;
+}
+.cf_colRight_box.boxslide h2{
+	padding-bottom:0px;
+}
+.cf_colRight_box.boxslide .btn{
+	position:absolute;
+	top:4px;
+	display:inline-block;
+	width:29px;
+	height:29px;
+}
+.cf_colRight_box.boxslide .btn input{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	opacity:0;
+}

@@ -1,0 +1,13 @@
+.jqifade{
+    position: fixed !important;  /* override from popup style to fix issue about grey background when scrolling*/
+}
+
+
+
+.body_iframe{
+    overflow: hidden;
+}
+
+.ui-dialog .ui-dialog-content{
+    padding: 0!important;
+}

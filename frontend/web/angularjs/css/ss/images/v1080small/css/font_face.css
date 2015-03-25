@@ -1,0 +1,12 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'EurostileExtended-Roman';
+    src: url('eurostile_extended.eot');
+    src: url('eurostile_extended.eot?#iefix') format('embedded-opentype'),
+         url('eurostile_extended.woff') format('woff'),
+         url('eurostile_extended.ttf') format('truetype'),
+         url('eurostile_extended.svg#EurostileExtended-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

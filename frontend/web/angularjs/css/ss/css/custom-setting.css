@@ -1,0 +1,51 @@
+.box_setting{
+    height:42px;
+    width: 103px;
+    background-color:#999;
+    font-weight: bold;
+}
+#wrapper_setting label,span{
+    font-size: 18px;
+    font-weight: bold;
+}
+.box_setting_left{
+    text-align: center;
+    float: left;
+    height:40px;
+    width: 75px;
+    position: relative;
+}
+.box_setting_left label{
+
+    position: absolute;
+    top:12px;
+    right: 20px;
+    color: white;
+}
+.box_setting_right{
+    float: left;
+    height:40px;
+    width: 25px;
+}
+a#upObscure{
+    background:url(../images/up-arrow.png) 0 0px no-repeat;
+    display:block;
+    width:24px;
+    height:19px;
+    left:0;
+    top:0;
+}
+a#downObscure{
+    background:url(../images/down-arrow.png) 0 0px no-repeat;
+    display:block;
+    width:24px;
+    height:19px;
+    left:0;
+    top:0;
+}
+a#upObscure:hover{
+    background-position:0 -24px;
+}
+a#downObscure:hover{
+    background-position:0 -24px;
+}

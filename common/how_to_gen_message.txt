@@ -1,0 +1,49 @@
+- Open @common/config.php and add or change the language to whatever u like
+'language' => 'vi-VD',
+	(this setting stays equalvalent to component node 
+	
+- run command line tool
+- browse to project folder
+$ cd [yii project folder path]
+
+- generate message config
+$ yii message/config @common/i18n.php 
+
+- open the generated config and modify two params below
+
+'languages' => '[vi-VD]',
+'messagePath' => __DIR__. DIRECTORY_SEPARATOR . 'messages',
+
+- create 'messages' folder under the 'yiiproject/common' folder
+
+- run below command
+$ yii message/extract @common/i18n.php
+
+* the result:
+Yii find all of references of the prefix message that is used on the project and generate 
+the appropriate files
+
+example our project has defined:
+Yii::t('frontend', 'Welcome');
+Yii::t('backend', 'ttt');
+
+There would be two files are generated: frontend.php and backend.php
+
+- Final step is adding the following setting under component node of the @common/config.php
+
+'i18n' => [
+            'translations' => [
+                'frontend*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@common/messages'
+                ],
+                'backend*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@common/messages'
+                ],
+            ],
+        ],
+
+

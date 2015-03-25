@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.parkway_tc #container{
+	width:1080px;
+	background-color: #DDEEFF;
+    background-image: -moz-linear-gradient(270deg, #3888FC, #161A78);	
+	padding-bottom:20px;
+}
+body.parkway_tc{
+	background-image:none;
+	background-color:#FFF;
+}
+.parkway_tc #header{
+	height:267px;
+	width:100%;
+	font-family:"Times New Roman", Times, serif;
+	background:url(../images/bg_pk_header3.jpg) 0 0 repeat-x;
+	overflow:hidden;
+}
+.parkway_tc #header tr,
+.parkway_tc #header td{
+	vertical-align:top;
+}
+.parkway_tc #header table{
+	height:184px;
+}
+.parkway_tc #content{
+	padding:20px;
+	width:auto;
+	display:block;
+	margin:0 0 0 0px;
+	width:1040px;
+}
+.parkway_tc td{
+	font-size:16px;
+}
+.parkway_tc .directoryListMid td{
+	font-weight:bold;
+	padding-bottom:10px;
+}
+.parkway_tc table{
+	width:100%;
+}
+.parkway_tc td.dlistCol2{
+	width:30%;
+}
+.parkway_tc td.dlistCol7{
+	width:5%;
+}
+.parkway_tc table.pkbottom{
+	width:100%;
+	margin-top:30px;
+}
+.parkway_tc table.pkbottom td{
+	width:25%;
+	text-align:center;
+}
+.parkway_tc table.pkbottom .btn1{
+	pointer-events: auto; width: 150px; height: 48px; z-index: 25; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(5, 62, 144); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+	line-height:48px;
+}
+.parkway_tc table.pkbottom .btn2{
+	pointer-events: auto; width: 150px; height: 48px; z-index: 24; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(15, 101, 251); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+	line-height:48px;
+}
+.parkway_tc table.pkbottom .btn3{
+	pointer-events: auto; width: 150px; height: 48px; z-index: 23; border-right: 1px solid rgb(160, 160, 160); border-style: solid; padding: 6px; border-width: 1px; -moz-user-select: none; opacity: 1; background-color: rgb(15, 101, 251); border-bottom-left-radius: 16px; box-shadow: -4px -2px 8px rgb(0, 0, 0); border-top-right-radius: 16px; border-color: rgb(160, 160, 160); word-wrap: break-word; display: inline; font-family: Georgia,Times,'Times New Roman',Serif; font-size: 36px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; overflow: visible;
+	line-height:48px;
+}
+.parkway_tc table.pkbottom td,
+.parkway_tc table.pkbottom tr{
+	vertical-align:middle;
+}
+.parkway_tc .header_pk{
+	width:100%;
+	height:140px;
+	margin:0 auto;
+	overflow:hidden;
+	color:#004677;
+	text-align:center;
+	text-transform:capitalize;
+	font-size:73px;
+	line-height:60px;
+	padding-top:28px;
+	padding-bottom:16px;
+}
+.parkway_tc .header_pk span{
+	font-size:52px;
+	text-transform:uppercase;
+	letter-spacing:15px;
+}
+.parkway_tc .pk_title{
+	color:#FFF;
+	font-size:50px;
+	text-align:center;
+	text-transform:capitalize;
+	text-align:center;
+	width:100%;
+	height:81px;
+	line-height:81px;	
+}

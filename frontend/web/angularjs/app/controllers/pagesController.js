@@ -1,4 +1,4 @@
-app.controller('indexCtrl', function ($rootScope, $scope) {
+app.controller('IndexCtrl', function ($rootScope, $scope) {
     $rootScope.baseUrl = _yii_app.baseUrl;
     $rootScope.layoutPath = _yii_app.layoutPath;
 
@@ -42,14 +42,16 @@ app.controller('CustomOrderCtrl', function ($rootScope, $scope, $modal, $filter,
 app.controller('RemoteModalCtrl', function ($scope, $modal, $log) {
 
     $scope.items = ['item1', 'item2', 'item3'];
+    $scope.obj = {};
 
     $scope.open = function (size) {
         var modalInstance = $modal.open({
-            templateUrl: _yii_app.absTemplatePath + '/partials/signup.html',
+            templateUrl: _yii_app.absTemplatePath + '/partials/modal-content-signup.html',
             windowTemplateUrl: _yii_app.absTemplatePath + '/partials/modal-window-signup.html',
             controller: 'ModalInstanceCtrl',
             windowClass: 'app-modal-window',
             size: size,
+            scope: $scope,
             backdrop: false,
             resolve: {
                 items: function () {
@@ -80,6 +82,11 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
+
+    $scope.changeImage = function(index){
+        console.log(index, 'ttt');
+        $scope.sign1.displayIndex = index;
+    }
 });
 
 app.controller('DemoCtrl', function ($rootScope, $scope) {
@@ -87,7 +94,14 @@ app.controller('DemoCtrl', function ($rootScope, $scope) {
     $rootScope.layoutPath = _yii_app.layoutPath;
 
     $rootScope.bodyClass = '';
-    $scope.params = {};
+    $scope.sign1 = {};
+
+    $scope.images = [
+        _yii_app.layoutPath + '/images/img_kiosk_preview2.jpg',
+        _yii_app.layoutPath + '/images/img_kiosk_preview7.jpg',
+
+    ];
+    $scope.sign1.displayIndex = 1;
 
 
 });

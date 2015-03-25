@@ -1,0 +1,61 @@
+
+.storage-spinner{
+    float:left; position:relative;
+    background-color: blue;
+}
+
+.storage-spinner .block_indent{
+
+}
+.storage-spinner .block_indent_left{
+    float:left;
+    width:230px;
+    padding:10px 30px 5px 30px;
+    background-color:#999;
+    border-right:solid 1px #333;
+    position:relative;
+    min-height:25px;
+}
+.storage-spinner .block_indent_left label{
+    font-size:18px;
+    padding-left:30px;
+    display:block;
+    margin-bottom:5px;
+
+}
+.storage-spinner .block_indent_left input[type=radio]{
+    float:left;
+}
+
+.storage-spinner .buttomArrow{
+    width:24px;
+    height:38px;
+    position:absolute;
+    float:left;
+    top:0;
+    right:10px;
+}
+.storage-spinner .buttomArrow a.up{
+    display:block;
+    width:24px;
+    height:19px;
+    left:0;
+    top:0;
+    background:url(../images/up-arrow.png) 0 0px no-repeat;
+}
+.storage-spinner .buttomArrow a.down{
+    display:block;
+    width:24px;
+    height:19px;
+    left:0;
+    bottom:0;
+    background:url(../images/down-arrow.png) 0 -2px no-repeat;
+}
+.storage-spinner .buttomArrow a.up:hover{
+    background-position:0 -24px;
+
+}
+.storage-spinner .buttomArrow a.down:hover{
+    background-position:0 -26px;
+
+}

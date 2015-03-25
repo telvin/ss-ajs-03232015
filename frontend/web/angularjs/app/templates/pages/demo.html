@@ -1,4 +1,4 @@
-<div id="container">
+<div id="container" ng-controller="DemoCtrl">
 
     <div id="header"><!-- header -->
         <non-user-top-menu></non-user-top-menu>
@@ -8,9 +8,20 @@
     <div id="main" holder="loading">
         <div id="content">
 
-
+            <img ng-src="{{images[sign1.displayIndex]}}" width="400" height="300" />
 
 
         </div>
     </div>
+
+    <div ng-controller="RemoteModalCtrl">
+
+        <button class="btn btn-default" ng-click="open()">Open me!</button>
+        <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+        <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+    </div>
+
 </div>
+
