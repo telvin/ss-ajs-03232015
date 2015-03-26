@@ -143,7 +143,7 @@ app.controller('Demo2Ctrl', function ($rootScope, $scope, SignalService) {
     $rootScope.bodyClass = '';
 
     $scope.images = [
-        _yii_app.layoutPath + '/images/music_magoc.jpg',
+        //_yii_app.layoutPath + '/images/music_magoc.jpg',
         _yii_app.layoutPath + '/images/teamwork1.jpg',
         _yii_app.layoutPath + '/images/music-work-shop.jpg'
     ];
