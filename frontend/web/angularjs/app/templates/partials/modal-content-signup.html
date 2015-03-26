@@ -2,10 +2,17 @@
     <h3 class="modal-title">Remote Example</h3>
 </div>
 <div class="modal-body">
-    <p>Click the button to change the image in the demo page</p>
+    <p>Click the button to change the image on the demo</p>
     <ul>
-        <li ng-repeat="item in items track by $index">
+        <li ng-repeat="item in demo_items track by $index">
             <a ng-click="changeImage($index)" ng-class="{active: displayIndex == $index}">{{ item }}</a>
+        </li>
+    </ul>
+
+    <p>Click the button to change the image on the demo2</p>
+    <ul>
+        <li ng-repeat="item in demo2_items track by $index">
+            <a ng-click="changeImageDemo2($index)" ng-class="{active: displayIndex == $index}">{{ item }}</a>
         </li>
     </ul>
 </div>

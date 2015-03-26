@@ -26,6 +26,15 @@ app.config(['$routeProvider', '$locationProvider',
                     '../../angularjs/css/ss/css/addcontent121212.css',
                 ]
             })
+            .when('/demo2', {
+                templateUrl: _yii_app.templatePath + '/pages/demo2.html',
+                controller: 'Demo2Ctrl',
+                css: [
+                    '../../angularjs/css/ss/css/screen.css',
+                    '../../angularjs/css/ss/css/new_content_database.css',
+                    '../../angularjs/css/ss/css/addcontent121212.css',
+                ]
+            })
 
             .otherwise({
                 redirectTo: '/'
